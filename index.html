@@ -18,14 +18,7 @@
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="#inicio" class="logo" aria-label="Seremas - Inicio">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="17" cy="17" r="16" stroke="#2E8B6F" stroke-width="2"/>
-          <path d="M11 20c1.5-6 4-9 6-9s4.5 3 6 9" stroke="#8BC34A" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="17" cy="11" r="2.4" fill="#3BAFBF"/>
-        </svg>
-      </span>
-      <span class="logo-text">Seremas</span>
+      <img src="img/logo/logo-seremas-gris.png" alt="Seremas - Medicina para el hombre y la mujer" class="logo-img">
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
@@ -51,19 +44,51 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-    <div class="hero-media" role="img" aria-label="Familia y bebé recién nacido, imagen emotiva de la clínica Seremas">
-      <div class="hero-media-placeholder">
-        <span>[COMPLETAR: foto real hero — familia / bebé]</span>
-      </div>
+    <div class="hero-media">
+      <img src="img/hero/hero-familia.jpg" alt="" class="hero-img" aria-hidden="true">
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
-      <p class="eyebrow">Medicina reproductiva y salud sexual</p>
-      <h1>Te acompañamos en cada paso hacia tu familia</h1>
-      <p class="hero-sub">Un equipo médico especializado, con calidez humana y tecnología de vanguardia, para ayudarte a cumplir el sueño de ser padres.</p>
+      <p class="eyebrow">Todo sobre la fertilidad</p>
+      <h1>Somos una clínica especializada en fertilidad asistida</h1>
+      <p class="hero-sub">Ofrecemos varios tratamientos para lograr ese preciado objetivo: dar vida. Contamos con el equipo de profesionales para que puedas cumplir tu sueño.</p>
       <div class="hero-cta-group">
         <a href="#reservar" class="btn btn-primary btn-lg">Reservar turno ahora</a>
         <a href="#especialidades" class="btn btn-ghost btn-lg">Conocé nuestras especialidades</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIENVENIDA / POR QUÉ ELEGIRNOS ===== -->
+  <section class="section section-welcome">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-dark">Bienvenidos a Seremas</p>
+        <h2>Te ofrecemos la mejor atención personalizada en tratamientos de fertilización asistida</h2>
+        <p class="section-sub">Tenemos el equipo de profesionales para que puedas cumplir tu sueño.</p>
+      </div>
+
+      <div class="welcome-grid">
+        <div class="welcome-item">
+          <img src="img/icon-1.png" alt="" class="welcome-icon">
+          <h3>Consultas personalizadas</h3>
+          <p>En SEREMAS cada persona es única y por eso cada consulta es personalizada para evaluar cada historia y buscar el mejor tratamiento.</p>
+        </div>
+        <div class="welcome-item">
+          <img src="img/icon-2.png" alt="" class="welcome-icon">
+          <h3>Privacidad y confort</h3>
+          <p>Ofrecemos a nuestros pacientes todos los recursos para hacer realidad el sueño de tener hijos, para eso contamos con las mejores instalaciones.</p>
+        </div>
+        <div class="welcome-item">
+          <img src="img/icon-3.png" alt="" class="welcome-icon">
+          <h3>Equipo especializado</h3>
+          <p>Un equipo de profesionales altamente calificado y con equipamiento de última generación.</p>
+        </div>
+        <div class="welcome-item">
+          <img src="img/icon-4.png" alt="" class="welcome-icon">
+          <h3>Seguridad y experiencia</h3>
+          <p>En SEREMAS pretendemos que nuestros pacientes se sientan verdaderamente seguros con la confianza y contención que merecen.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -74,12 +99,10 @@
       <div class="section-head">
         <p class="eyebrow eyebrow-dark">Nuestras especialidades</p>
         <h2>Un abordaje integral de tu salud</h2>
-        <p class="section-sub">Ocho especialidades trabajando en conjunto para acompañarte en cada etapa, con un equipo médico dedicado a cada área.</p>
+        <p class="section-sub">Brindamos un asesoramiento integral basado en el conocimiento y la experiencia de cada uno de nuestros profesionales.</p>
       </div>
 
-      <div class="cards-grid" id="specialty-grid">
-        <!-- Cards injected via JS from data below for consistency, see js/script.js -->
-      </div>
+      <div class="cards-grid" id="specialty-grid"></div>
     </div>
   </section>
 
@@ -88,52 +111,33 @@
     <div class="container">
       <div class="section-head">
         <p class="eyebrow eyebrow-dark">Nuestro equipo</p>
-        <h2>Profesionales que te acompañan</h2>
-        <p class="section-sub">Especialistas con amplia trayectoria en medicina reproductiva y salud sexual.</p>
+        <h2>Nuestro equipo experto en fertilidad asistida</h2>
+        <p class="section-sub">SEREMAS abrió sus puertas con un objetivo claro y definido: ofrecer a sus pacientes todos los recursos de la ciencia moderna para hacer realidad el sueño de tener hijos, aplicados por especialistas reconocidos en Argentina y en el exterior. ¡Conocelos!</p>
       </div>
 
-      <div class="team-grid">
+      <div class="team-grid team-grid-2">
         <article class="team-card">
           <div class="team-photo">
-            <span class="photo-placeholder">[FOTO REAL: Dra. de Vincentiis]</span>
+            <img src="img/equipo/doctora-de-vincentiis.jpg" alt="Lic. Sabrina de Vincentiis">
           </div>
           <div class="team-info">
-            <h3>Dra. de Vincentiis</h3>
-            <p class="team-role">[COMPLETAR: especialidad / cargo]</p>
+            <h3>Lic. Sabrina de Vincentiis</h3>
+            <p class="team-role">Directora del Laboratorio de Embriología</p>
+            <p class="team-bio">Licenciatura en Ciencias Biológicas con especialización en Biología Molecular y Celular.</p>
           </div>
         </article>
 
         <article class="team-card">
           <div class="team-photo">
-            <span class="photo-placeholder">[FOTO REAL: Dr. Brugo Olmedo]</span>
+            <img src="img/equipo/doctor-brugo-olmedo.jpg" alt="Dr. Santiago Brugo Olmedo">
           </div>
           <div class="team-info">
-            <h3>Dr. Brugo Olmedo</h3>
-            <p class="team-role">[COMPLETAR: especialidad / cargo]</p>
-          </div>
-        </article>
-
-        <article class="team-card">
-          <div class="team-photo">
-            <span class="photo-placeholder">[FOTO REAL: nombre del profesional]</span>
-          </div>
-          <div class="team-info">
-            <h3>[COMPLETAR: nombre]</h3>
-            <p class="team-role">[COMPLETAR: especialidad / cargo]</p>
-          </div>
-        </article>
-
-        <article class="team-card">
-          <div class="team-photo">
-            <span class="photo-placeholder">[FOTO REAL: nombre del profesional]</span>
-          </div>
-          <div class="team-info">
-            <h3>[COMPLETAR: nombre]</h3>
-            <p class="team-role">[COMPLETAR: especialidad / cargo]</p>
+            <h3>Dr. Santiago Brugo Olmedo</h3>
+            <p class="team-role">Director Médico</p>
+            <p class="team-bio">Médico cirujano recibido por la Universidad Nacional de Córdoba en 1977.</p>
           </div>
         </article>
       </div>
-      <p class="team-note">Nota: reemplazar los recuadros de foto por las imágenes reales del equipo médico ya existentes — no se generaron ni modificaron fotografías.</p>
     </div>
   </section>
 
@@ -143,28 +147,34 @@
       <div class="section-head">
         <p class="eyebrow eyebrow-dark">Confianza y trayectoria</p>
         <h2>Respaldo médico y años de experiencia</h2>
+        <p class="section-sub">SEREMAS, Centro de Medicina para el Hombre y la Mujer, abrió sus puertas en agosto de 2006 fundado por el Dr. Santiago Brugo Olmedo y la Lic. Sabrina De Vincentiis.</p>
       </div>
 
       <div class="trust-grid">
         <div class="trust-stat">
-          <span class="trust-number">[COMPLETAR]</span>
-          <span class="trust-label">años de trayectoria</span>
+          <span class="trust-number">20+</span>
+          <span class="trust-label">años de trayectoria (desde 2006)</span>
         </div>
         <div class="trust-stat">
-          <span class="trust-number">[COMPLETAR]</span>
-          <span class="trust-label">familias acompañadas</span>
+          <span class="trust-number">1487</span>
+          <span class="trust-label">embarazos a término</span>
         </div>
         <div class="trust-stat">
-          <span class="trust-number">[COMPLETAR]</span>
-          <span class="trust-label">certificaciones / afiliaciones</span>
+          <span class="trust-number">135</span>
+          <span class="trust-label">tratamientos externos</span>
+        </div>
+        <div class="trust-stat">
+          <span class="trust-number">17</span>
+          <span class="trust-label">especialistas médicos</span>
         </div>
       </div>
 
-      <div class="badges-row" aria-label="Certificaciones y afiliaciones">
-        <div class="badge-item">[COMPLETAR: logo certificación 1]</div>
-        <div class="badge-item">[COMPLETAR: logo certificación 2]</div>
-        <div class="badge-item">[COMPLETAR: logo afiliación 3]</div>
-        <div class="badge-item">[COMPLETAR: logo afiliación 4]</div>
+      <div class="badges-row" aria-label="Reconocimientos y certificaciones">
+        <div class="badge-item">
+          <span class="badge-number">12</span>
+          reconocimientos internacionales
+        </div>
+        <div class="badge-item">[COMPLETAR: logo certificación / afiliación institucional]</div>
       </div>
     </div>
   </section>
@@ -179,16 +189,19 @@
 
       <div class="testimonials-grid">
         <blockquote class="testimonial-card">
-          <p>"[COMPLETAR: testimonio real de paciente]"</p>
-          <footer>— [COMPLETAR: nombre / iniciales del paciente]</footer>
+          <img class="testimonial-photo" src="img/testimonios/fernanda.jpg" alt="Catalina y Sofía, hijas de Fernanda, pacientes de Seremas">
+          <p>"Les escribo para contarles que el 1 de agosto nacieron Catalina y Sofía. Les agradezco desde mi corazón por haberme ayudado a cumplir este sueño tan anhelado de ser madre."</p>
+          <footer>— Fernanda</footer>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"[COMPLETAR: testimonio real de paciente]"</p>
-          <footer>— [COMPLETAR: nombre / iniciales del paciente]</footer>
+          <img class="testimonial-photo" src="img/testimonios/juan-pablo-cura-avella.png" alt="Familia de Juan Pablo Cura Avella, paciente de Seremas">
+          <p>"Como padres estamos orgullosos del camino transitado y Seremas tiene mucho que ver en este camino."</p>
+          <footer>— Juan Pablo Cura Avella</footer>
         </blockquote>
         <blockquote class="testimonial-card">
-          <p>"[COMPLETAR: testimonio real de paciente]"</p>
-          <footer>— [COMPLETAR: nombre / iniciales del paciente]</footer>
+          <img class="testimonial-photo" src="img/testimonios/marilin-y-pedro.jpg" alt="Josefina, hija de Marilin y Pedro, pacientes de Seremas">
+          <p>"Gracias al Dr. Brugo Olmedo por la felicidad que nos da la pequeña Josefina."</p>
+          <footer>— Marilin y Pedro</footer>
         </blockquote>
       </div>
     </div>
@@ -197,9 +210,9 @@
   <!-- ===== CTA FINAL / RESERVAR ===== -->
   <section class="cta-final" id="reservar">
     <div class="container cta-final-inner">
-      <h2>¿Listo para dar el primer paso?</h2>
-      <p>Reservá tu turno con nuestro equipo médico y comenzá tu camino hoy.</p>
-      <a href="#" class="btn btn-primary btn-lg">Reservar turno</a>
+      <h2>¿Querés hablar ahora mismo con nosotros?</h2>
+      <p>Escribinos por WhatsApp. Te respondemos rápido y te guiamos paso a paso sobre tu consulta: respuesta inmediata del equipo médico, coordinación de turnos y presupuestos, y seguimiento personalizado.</p>
+      <a href="https://wa.me/5491160481891" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Reservar turno por WhatsApp</a>
     </div>
   </section>
 
@@ -209,16 +222,17 @@
 <footer class="site-footer" id="contacto">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <span class="logo-text logo-text-light">Seremas</span>
-      <p>Medicina reproductiva y salud sexual.</p>
+      <img src="img/logo/logo-seremas.png" alt="Seremas - Medicina para el hombre y la mujer" class="logo-img footer-logo-img">
+      <p>Somos una clínica especializada en fertilidad asistida.</p>
     </div>
 
     <div class="footer-col">
       <h3>Contacto</h3>
       <ul>
-        <li>[COMPLETAR: dirección]</li>
-        <li>[COMPLETAR: teléfono]</li>
-        <li>[COMPLETAR: email]</li>
+        <li>Arenales 1954, 1er piso, CABA</li>
+        <li>+54 11 5032-3358 / 3359 / 3360</li>
+        <li><a href="mailto:info@seremas.com">info@seremas.com</a></li>
+        <li>Lun a Vie 7.30 a 19 hs. Sáb 8 a 12 hs.</li>
       </ul>
     </div>
 
@@ -235,8 +249,9 @@
     <div class="footer-col">
       <h3>Seguinos</h3>
       <ul class="social-list">
-        <li><a href="#">[COMPLETAR: Instagram]</a></li>
-        <li><a href="#">[COMPLETAR: Facebook]</a></li>
+        <li><a href="https://www.instagram.com/seremas.fertilidad/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.facebook.com/SeremasMedicina/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://twitter.com/seremasok" target="_blank" rel="noopener noreferrer">Twitter</a></li>
       </ul>
     </div>
   </div>
@@ -248,7 +263,7 @@
 </footer>
 
 <!-- ===== WHATSAPP FLOTANTE ===== -->
-<a href="https://wa.me/[COMPLETAR]" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+<a href="https://wa.me/5491160481891" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.735 5.47 2.02 7.77L0 32l8.44-1.98A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z" fill="#25D366"/>
     <path d="M23.5 19.1c-.4-.2-2.3-1.1-2.6-1.3-.35-.13-.6-.2-.86.2-.26.4-1 1.3-1.22 1.56-.22.26-.45.3-.84.1-.4-.2-1.66-.61-3.16-1.94-1.17-1.04-1.96-2.33-2.19-2.72-.23-.4-.02-.61.17-.8.18-.18.4-.46.6-.7.2-.23.26-.4.4-.66.13-.26.06-.5-.03-.7-.1-.2-.86-2.08-1.18-2.85-.31-.75-.63-.65-.86-.66-.22-.01-.48-.01-.73-.01-.26 0-.68.1-1.03.5-.35.4-1.35 1.32-1.35 3.2 0 1.88 1.38 3.7 1.57 3.96.2.26 2.72 4.15 6.58 5.82.92.4 1.63.63 2.19.8.92.29 1.75.25 2.41.15.74-.11 2.27-.93 2.6-1.82.31-.9.31-1.66.22-1.82-.09-.16-.34-.26-.74-.46Z" fill="#fff"/>

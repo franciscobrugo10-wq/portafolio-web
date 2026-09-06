@@ -1,46 +1,45 @@
 // ===== Datos de especialidades =====
-// Descripciones breves genéricas (no datos médicos/cifras) — reemplazar por
-// contenido definitivo de la clínica si se desea mayor precisión.
+// Textos e íconos extraídos de seremas.com/ (sección "Nuestras especialidades").
 const SPECIALTIES = [
   {
     name: "Medicina Reproductiva",
-    desc: "Diagnóstico y tratamiento de la fertilidad para ayudarte a alcanzar tu proyecto de familia.",
-    icon: `<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>`
+    desc: "Nuestro objetivo es preservar la fecundidad, diagnosticar y tratar la infertilidad y otros problemas reproductivos para lograr cumplir el sueño de tener un hijo.",
+    icon: "img/especialidades/01.png"
   },
   {
     name: "Ginecología",
-    desc: "Cuidado integral de la salud femenina en cada etapa de la vida.",
-    icon: `<path d="M12 3v6"/><circle cx="12" cy="14" r="6"/><path d="M9 20h6"/>`
+    desc: "Atención médica de la mujer durante su edad reproductiva, ya sea para el control, asesoramiento y eventual diagnóstico y tratamiento.",
+    icon: "img/especialidades/02-1.png"
   },
   {
     name: "Urología",
-    desc: "Diagnóstico y tratamiento de las afecciones del sistema urinario y reproductor masculino.",
-    icon: `<path d="M8 3h8l-1 6a3 3 0 0 1-6 0L8 3Z"/><path d="M12 13v8"/>`
+    desc: "Las infecciones urinarias, las litiasis, la incontinencia urinaria y demás enfermedades urológicas deben ser diagnosticadas y tratadas.",
+    icon: "img/especialidades/03.png"
   },
   {
     name: "Endocrinología",
-    desc: "Evaluación y tratamiento hormonal para tu salud reproductiva y general.",
-    icon: `<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7 5.6 5.6"/>`
+    desc: "Profesionales asociados que se encargan del estudio de los problemas endocrinos del eje hipotálamo-hipófiso-gonadal, exceso de prolactina, como así también de las enfermedades de la tiroides, paratiroides y adrenales.",
+    icon: "img/especialidades/04.png"
   },
   {
     name: "Climaterio Masculino",
-    desc: "Acompañamiento médico en los cambios hormonales propios de la edad adulta.",
-    icon: `<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>`
+    desc: "Atendemos a aquellos pacientes que en general han alcanzado los 50 años y que presentan algún síntoma que puede variar desde cierta disfunción sexual hasta cansancio generalizado.",
+    icon: "img/especialidades/05.png"
   },
   {
     name: "Psicología",
-    desc: "Contención emocional y acompañamiento psicológico durante todo el proceso.",
-    icon: `<path d="M12 3a5 5 0 0 0-5 5c0 2 1 3 1 5v2h8v-2c0-2 1-3 1-5a5 5 0 0 0-5-5Z"/><path d="M9 19h6M10 22h4"/>`
+    desc: "Fundamental debido al impacto que los problemas de la salud reproductiva ejercen sobre el área emocional de los pacientes.",
+    icon: "img/especialidades/06.png"
   },
   {
     name: "Andrología",
-    desc: "Diagnóstico y tratamiento de la salud reproductiva y sexual masculina.",
-    icon: `<circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M14 4h6v6"/>`
+    desc: "Disciplina médica que se aboca al estudio de los trastornos de la fertilidad y sexualidad del hombre. En otras palabras, se ocupa de la salud reproductiva masculina.",
+    icon: "img/especialidades/07.png"
   },
   {
     name: "Sexología",
-    desc: "Abordaje profesional de la salud y el bienestar sexual en pareja o de forma individual.",
-    icon: `<path d="M12 21s-7-4.35-9.5-8.5C.7 8.9 2.4 5 6 5c2 0 3.5 1.2 4 2.5C10.5 6.2 12 5 14 5c3.6 0 5.3 3.9 3.5 7.5C19 16.65 12 21 12 21Z"/>`
+    desc: "El diagnóstico preciso sumado a tratamientos sexológicos y/o con medicación acorde a cada caso en especial, constituyen la respuesta más moderna y eficaz.",
+    icon: "img/especialidades/08.png"
   }
 ];
 
@@ -51,9 +50,7 @@ function renderSpecialties() {
   grid.innerHTML = SPECIALTIES.map((s) => `
     <article class="specialty-card">
       <div class="specialty-icon" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          ${s.icon}
-        </svg>
+        <span class="specialty-icon-fill" style="-webkit-mask-image:url('${s.icon}');mask-image:url('${s.icon}');"></span>
       </div>
       <h3>${s.name}</h3>
       <p>${s.desc}</p>

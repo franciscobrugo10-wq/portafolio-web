@@ -106,6 +106,7 @@ a:focus-visible, button:focus-visible {
   gap: 24px;
 }
 .logo { display: flex; align-items: center; gap: 10px; }
+.logo-img { height: 42px; width: auto; }
 .logo-text {
   font-size: 1.5rem;
   font-weight: 800;
@@ -113,6 +114,7 @@ a:focus-visible, button:focus-visible {
   letter-spacing: -.01em;
 }
 .logo-text-light { color: #fff; }
+.footer-logo-img { height: 40px; margin-bottom: 10px; }
 
 .main-nav ul { display: flex; gap: 28px; }
 .main-nav a {
@@ -172,17 +174,12 @@ a:focus-visible, button:focus-visible {
   inset: 0;
   z-index: 0;
 }
-.hero-media-placeholder {
+.hero-img {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #cfe8dd, #eef6ea);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--ink-soft);
-  font-weight: 600;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero-overlay {
   position: absolute;
@@ -221,6 +218,28 @@ a:focus-visible, button:focus-visible {
 .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 .section-sub { color: var(--ink-soft); font-size: 1.05rem; }
 
+/* ===== Bienvenida / por qué elegirnos ===== */
+.section-welcome { padding-top: 72px; padding-bottom: 72px; }
+.welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.welcome-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+}
+.welcome-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.welcome-item p {
+  color: var(--ink-soft);
+  font-size: .92rem;
+}
+
 /* ===== Specialty cards ===== */
 .cards-grid {
   display: grid;
@@ -246,12 +265,20 @@ a:focus-visible, button:focus-visible {
   height: 52px;
   border-radius: 14px;
   background: rgba(59, 175, 191, .12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 18px;
+  position: relative;
 }
-.specialty-icon svg { stroke: var(--turquoise); }
+.specialty-icon-fill {
+  position: absolute;
+  inset: 0;
+  background-color: var(--turquoise);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 60%;
+  mask-size: 60%;
+}
 .specialty-card h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;
@@ -280,6 +307,12 @@ a:focus-visible, button:focus-visible {
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+.team-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 48px;
+}
 .team-card { text-align: center; }
 .team-photo {
   aspect-ratio: 1 / 1;
@@ -288,21 +321,16 @@ a:focus-visible, button:focus-visible {
   background: #EAF1EE;
   border: 4px solid #fff;
   box-shadow: var(--shadow-sm);
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
+  margin: 0 auto 24px;
+  max-width: 220px;
 }
-.photo-placeholder {
-  font-size: .78rem;
-  color: var(--ink-soft);
-  padding: 10px;
-  text-align: center;
-  font-weight: 600;
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .team-info h3 {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   margin-bottom: 4px;
 }
 .team-role {
@@ -311,19 +339,17 @@ a:focus-visible, button:focus-visible {
   font-size: .92rem;
   text-transform: uppercase;
   letter-spacing: .03em;
+  margin-bottom: 10px;
 }
-.team-note {
-  margin-top: 40px;
-  text-align: center;
-  font-size: .85rem;
+.team-bio {
   color: var(--ink-soft);
-  font-style: italic;
+  font-size: .95rem;
 }
 
 /* ===== Trust ===== */
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-bottom: 56px;
 }
@@ -358,6 +384,18 @@ a:focus-visible, button:focus-visible {
   min-width: 160px;
   text-align: center;
 }
+.badge-item:first-child {
+  border-style: solid;
+  border-color: var(--turquoise);
+  background: rgba(59, 175, 191, .06);
+  color: var(--navy);
+}
+.badge-item .badge-number {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--teal-dark);
+}
 
 /* ===== Testimonials ===== */
 .testimonials-grid {
@@ -372,6 +410,14 @@ a:focus-visible, button:focus-visible {
   border-left: 4px solid var(--lime);
   border-radius: var(--radius);
   padding: 28px;
+}
+.testimonial-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid var(--off-white);
 }
 .testimonial-card p {
   font-size: 1.02rem;
@@ -436,10 +482,12 @@ a:focus-visible, button:focus-visible {
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
+  .welcome-grid { grid-template-columns: repeat(2, 1fr); }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -463,8 +511,10 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 640px) {
   .section { padding: 64px 0; }
+  .welcome-grid { grid-template-columns: 1fr; gap: 28px; }
   .cards-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .team-grid-2 { grid-template-columns: 1fr; gap: 40px; }
   .footer-inner { grid-template-columns: 1fr; padding: 48px 0 32px; }
   .hero { min-height: 520px; }
 }
