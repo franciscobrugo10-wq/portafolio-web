@@ -56,11 +56,13 @@ em { font-style: italic; color: var(--accent); }
 }
 
 .skip-link {
-  position: fixed; top: -100px; left: 1rem;
+  position: absolute; top: 0; left: 1rem;
+  transform: translateY(-160%);
   padding: .6rem 1rem; background: var(--ink); color: var(--paper);
   z-index: 9999; border-radius: 8px; font-weight: 500;
+  transition: transform 0.2s var(--ease-out);
 }
-.skip-link:focus { top: 1rem; }
+.skip-link:focus { transform: translateY(0.8rem); }
 
 /* =============================================================
    3. Utilities

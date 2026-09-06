@@ -23,13 +23,13 @@
   },
   "svc-color": {
     "src": "assets/img/svc-color.webp",
-    "title": "BLOW OUT HAIR STYLES FOR WOMEN IN HANOI KORIGAMI SALON 0915804875",
-    "creator": "www.korigami.vn + Zalo 0915804875",
-    "creator_url": "https://www.flickr.com/photos/51796957@N03",
-    "license": "pdm",
-    "license_version": "1.0",
-    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/51796957@N03/31754877892",
+    "title": "Long blonde hair with highlights",
+    "creator": "colourauthority.com",
+    "creator_url": "https://www.flickr.com/photos/75349763@N04",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/75349763@N04/6776475056",
     "source": "flickr"
   },
   "svc-peinado": {
@@ -45,24 +45,24 @@
   },
   "svc-tratamiento": {
     "src": "assets/img/svc-tratamiento.webp",
-    "title": "Wash & Go",
-    "creator": "Gerald England",
-    "creator_url": "https://geograph.org.uk/profile/22742",
-    "license": "by-sa",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "foreign_landing_url": "https://www.geograph.org.uk/photo/3251148",
-    "source": "geographorguk"
-  },
-  "svc-barberia": {
-    "src": "assets/img/svc-barberia.webp",
-    "title": "pink floyd the barber",
-    "creator": "loufi",
-    "creator_url": "https://www.flickr.com/photos/35468134730@N01",
+    "title": "Rheineck - Time Capsule",
+    "creator": "Welcome to Switzerland backstage!",
+    "creator_url": "https://www.flickr.com/photos/70981241@N00",
     "license": "by",
     "license_version": "2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/35468134730@N01/224663185",
+    "foreign_landing_url": "https://www.flickr.com/photos/70981241@N00/51931119120",
+    "source": "flickr"
+  },
+  "svc-barberia": {
+    "src": "assets/img/svc-barberia.webp",
+    "title": "Barber Shop",
+    "creator": "Ömer Ünlü",
+    "creator_url": "https://www.flickr.com/photos/55293400@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/55293400@N07/11840382553",
     "source": "flickr"
   },
   "svc-novias": {
@@ -78,13 +78,13 @@
   },
   "gallery-1": {
     "src": "assets/img/gallery-1.webp",
-    "title": "Madonna",
-    "creator": "choupigloupi",
-    "creator_url": "https://www.flickr.com/photos/24492571@N00",
+    "title": "Long, curly brown hair with highlights",
+    "creator": "colourauthority.com",
+    "creator_url": "https://www.flickr.com/photos/75349763@N04",
     "license": "by",
     "license_version": "2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/24492571@N00/474653884",
+    "foreign_landing_url": "https://www.flickr.com/photos/75349763@N04/6776474934",
     "source": "flickr"
   },
   "gallery-2": {
@@ -144,13 +144,13 @@
   },
   "about-team": {
     "src": "assets/img/about-team.webp",
-    "title": "Hair Salon Team",
-    "creator": "Kyle Taylor, Dream It. Do It.",
-    "creator_url": "https://www.flickr.com/photos/95672737@N00",
-    "license": "by",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/95672737@N00/1352488418",
-    "source": "flickr"
+    "title": "Fashion stylists - Jorj Barber",
+    "creator": "Mostafameraji",
+    "creator_url": "https://commons.wikimedia.org/wiki/User:Mostafameraji",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=93318821",
+    "source": "wikimedia"
   }
 }
