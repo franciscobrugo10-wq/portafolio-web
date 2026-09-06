@@ -1,0 +1,156 @@
+{
+  "hero": {
+    "src": "assets/img/hero.webp",
+    "title": "Rheineck - Hair Salon 1970-2022",
+    "creator": "Welcome to Switzerland backstage!",
+    "creator_url": "https://www.flickr.com/photos/70981241@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/70981241@N00/51998350660",
+    "source": "flickr"
+  },
+  "svc-corte": {
+    "src": "assets/img/svc-corte.webp",
+    "title": "getting hair done in desert",
+    "creator": "loufi",
+    "creator_url": "https://www.flickr.com/photos/35468134730@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/35468134730@N01/3500051",
+    "source": "flickr"
+  },
+  "svc-color": {
+    "src": "assets/img/svc-color.webp",
+    "title": "BLOW OUT HAIR STYLES FOR WOMEN IN HANOI KORIGAMI SALON 0915804875",
+    "creator": "www.korigami.vn + Zalo 0915804875",
+    "creator_url": "https://www.flickr.com/photos/51796957@N03",
+    "license": "pdm",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/51796957@N03/31754877892",
+    "source": "flickr"
+  },
+  "svc-peinado": {
+    "src": "assets/img/svc-peinado.webp",
+    "title": "Jenny's Blowout",
+    "creator": "ralph and jenny",
+    "creator_url": "https://www.flickr.com/photos/92269745@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/92269745@N00/11937961243",
+    "source": "flickr"
+  },
+  "svc-tratamiento": {
+    "src": "assets/img/svc-tratamiento.webp",
+    "title": "Wash & Go",
+    "creator": "Gerald England",
+    "creator_url": "https://geograph.org.uk/profile/22742",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://www.geograph.org.uk/photo/3251148",
+    "source": "geographorguk"
+  },
+  "svc-barberia": {
+    "src": "assets/img/svc-barberia.webp",
+    "title": "pink floyd the barber",
+    "creator": "loufi",
+    "creator_url": "https://www.flickr.com/photos/35468134730@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/35468134730@N01/224663185",
+    "source": "flickr"
+  },
+  "svc-novias": {
+    "src": "assets/img/svc-novias.webp",
+    "title": "Wedding Hair Updo Styling",
+    "creator": "hairmagicbymila",
+    "creator_url": "https://www.flickr.com/photos/53445623@N05",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/53445623@N05/4939957512",
+    "source": "flickr"
+  },
+  "gallery-1": {
+    "src": "assets/img/gallery-1.webp",
+    "title": "Madonna",
+    "creator": "choupigloupi",
+    "creator_url": "https://www.flickr.com/photos/24492571@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/24492571@N00/474653884",
+    "source": "flickr"
+  },
+  "gallery-2": {
+    "src": "assets/img/gallery-2.webp",
+    "title": "mirrors are fun",
+    "creator": "rick",
+    "creator_url": "https://www.flickr.com/photos/35034361412@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/35034361412@N01/405538497",
+    "source": "flickr"
+  },
+  "gallery-3": {
+    "src": "assets/img/gallery-3.webp",
+    "title": "hair",
+    "creator": "Alaska Carter",
+    "creator_url": "https://www.flickr.com/photos/69964167@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/69964167@N07/6784577922",
+    "source": "flickr"
+  },
+  "gallery-4": {
+    "src": "assets/img/gallery-4.webp",
+    "title": "Hair Cut",
+    "creator": "Candace McDaniel",
+    "creator_url": "https://stocksnap.io/author/133875",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://stocksnap.io/photo/hair-cut-ASMG0XOU6M",
+    "source": "stocksnap"
+  },
+  "gallery-5": {
+    "src": "assets/img/gallery-5.webp",
+    "title": "Shortest haircut yet",
+    "creator": "Rochelle Hartman",
+    "creator_url": "https://www.flickr.com/photos/34756977@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/34756977@N00/4772548484",
+    "source": "flickr"
+  },
+  "gallery-6": {
+    "src": "assets/img/gallery-6.webp",
+    "title": "Pro Touch",
+    "creator": "Phalinn Ooi",
+    "creator_url": "https://www.flickr.com/photos/17868205@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/17868205@N00/8033043772",
+    "source": "flickr"
+  },
+  "about-team": {
+    "src": "assets/img/about-team.webp",
+    "title": "Ricky Lee Jones",
+    "creator": "Brockley Tim",
+    "creator_url": "https://www.flickr.com/photos/43518146@N05",
+    "license": "by-nc-nd",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/43518146@N05/6466482031",
+    "source": "flickr"
+  }
+}
