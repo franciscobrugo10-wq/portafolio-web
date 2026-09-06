@@ -144,13 +144,13 @@
   },
   "about-team": {
     "src": "assets/img/about-team.webp",
-    "title": "Ricky Lee Jones",
-    "creator": "Brockley Tim",
-    "creator_url": "https://www.flickr.com/photos/43518146@N05",
-    "license": "by-nc-nd",
+    "title": "Hair Salon Team",
+    "creator": "Kyle Taylor, Dream It. Do It.",
+    "creator_url": "https://www.flickr.com/photos/95672737@N00",
+    "license": "by",
     "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/43518146@N05/6466482031",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/95672737@N00/1352488418",
     "source": "flickr"
   }
 }
