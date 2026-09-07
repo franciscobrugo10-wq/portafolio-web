@@ -7,6 +7,14 @@
   --navy: #333C4E;
   --white: #FFFFFF;
   --off-white: #F7FAF9;
+  --mint: #E5F4EC;
+  --border-mint: rgba(46, 139, 111, .22);
+  /* Variantes más oscuras de teal/turquoise para texto: los tonos de marca
+     (--teal-dark, --turquoise) no llegan a 4.5:1 en textos chicos sobre
+     blanco o sobre el nuevo fondo --mint. Se usan solo en `color`, nunca
+     en fondos/bordes/íconos, para no tocar la paleta de marca en sí. */
+  --teal-text: #256E58;
+  --turquoise-text: #1F6E7A;
   --ink: #22282F;
   --ink-soft: #56606B;
   --border: #E3E9E6;
@@ -124,20 +132,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo-img { height: 42px; width: auto; }
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--teal-dark);
-  letter-spacing: -.01em;
-}
-.logo-text-light { color: #fff; }
 .footer-logo-img { height: 40px; margin-bottom: 10px; }
 
-.main-nav ul { display: flex; gap: 16px; }
+.main-nav ul { display: flex; gap: 32px; }
 .main-nav a {
   font-weight: 600;
   color: var(--navy);
-  font-size: .92rem;
+  font-size: 1rem;
   padding: 8px 0;
   position: relative;
   white-space: nowrap;
@@ -152,7 +153,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   transition: transform .2s ease;
 }
 .main-nav a:hover::after { transform: scaleX(1); }
-.main-nav a[aria-current="page"] { color: var(--teal-dark); }
+.main-nav a[aria-current="page"] { color: var(--teal-text); }
 .main-nav a[aria-current="page"]::after { transform: scaleX(1); background: var(--teal-dark); }
 
 .header-actions { display: flex; align-items: center; gap: 16px; }
@@ -222,7 +223,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   color: var(--lime-2);
   margin-bottom: 12px;
 }
-.eyebrow-dark { color: var(--turquoise); }
+.eyebrow-dark { color: var(--turquoise-text); }
 .hero h1 {
   color: #fff;
   font-size: clamp(2rem, 4.2vw, 3.1rem);
@@ -233,9 +234,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* ===== Section basics ===== */
 .section { padding: 88px 0; }
-.section-alt { background: var(--off-white); }
+.section-alt { background: var(--mint); }
 .section-head { max-width: 680px; margin: 0 auto 48px; text-align: center; }
 .section-head h1, .section-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.section-head h1::after, .section-head h2::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--teal-dark), var(--lime));
+}
 .section-sub { color: var(--ink-soft); font-size: 1.05rem; }
 
 /* ===== Bienvenida / por qué elegirnos ===== */
@@ -307,7 +317,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .procedure-item h3 {
   font-size: 1.02rem;
-  color: var(--teal-dark);
+  color: var(--teal-text);
   margin-bottom: 6px;
 }
 .procedure-item p {
@@ -365,7 +375,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* ===== Información para pacientes ===== */
 .coverage-box {
-  background: var(--off-white);
+  background: var(--mint);
   border-radius: var(--radius);
   padding: 28px;
 }
@@ -425,7 +435,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   cursor: pointer;
   touch-action: manipulation;
 }
-.accordion-trigger:hover { color: var(--teal-dark); }
+.accordion-trigger:hover { color: var(--teal-text); }
 .accordion-icon {
   flex: none;
   color: var(--turquoise);
@@ -485,7 +495,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   justify-content: center;
 }
 .leader-role {
-  color: var(--turquoise);
+  color: var(--turquoise-text);
   font-weight: 700;
   font-size: .82rem;
   text-transform: uppercase;
@@ -510,7 +520,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .value-card {
   background: #fff;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-mint);
   border-top: 4px solid var(--teal-dark);
   border-radius: var(--radius);
   padding: 28px;
@@ -562,7 +572,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: 1.05rem;
 }
 .gallery-role {
-  color: var(--turquoise);
+  color: var(--turquoise-text);
   font-size: .82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -635,7 +645,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .specialty-card {
   background: #fff;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-mint);
   border-radius: var(--radius);
   padding: 28px 24px;
   transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
@@ -678,7 +688,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .specialty-link {
   font-weight: 700;
-  color: var(--teal-dark);
+  color: var(--teal-text);
   font-size: .92rem;
   display: inline-flex;
   align-items: center;
@@ -699,7 +709,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   text-align: center;
   padding: 32px 16px;
   border-radius: var(--radius);
-  background: var(--off-white);
+  background: var(--mint);
+  border: 1px solid var(--border-mint);
 }
 .trust-number {
   display: block;
@@ -768,7 +779,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .testimonial-card footer {
   font-weight: 700;
-  color: var(--teal-dark);
+  color: var(--teal-text);
   font-size: .9rem;
 }
 
@@ -786,7 +797,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .site-footer { background: var(--navy); color: #C9D2DA; }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
   gap: 32px;
   padding: 64px 0 40px;
 }
@@ -828,7 +839,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .welcome-grid { grid-template-columns: repeat(2, 1fr); }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr 1fr; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .reasons-grid { grid-template-columns: 1fr; }
   .procedures-list { grid-template-columns: 1fr; }
@@ -838,7 +849,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .map-embed-wrap { aspect-ratio: 16 / 9; }
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 900px) {
   .main-nav {
     position: fixed;
     top: var(--header-h);
