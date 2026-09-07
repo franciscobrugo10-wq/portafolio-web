@@ -127,7 +127,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .logo-text-light { color: #fff; }
 .footer-logo-img { height: 40px; margin-bottom: 10px; }
 
-.main-nav ul { display: flex; gap: 28px; }
+.main-nav ul { display: flex; gap: 22px; }
 .main-nav a {
   font-weight: 600;
   color: var(--navy);
@@ -355,18 +355,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 /* ===== Información para pacientes ===== */
-.patients-grid {
-  display: grid;
-  grid-template-columns: minmax(240px, 320px) 1fr;
-  gap: 40px;
-  align-items: start;
-}
 .coverage-box {
   background: var(--off-white);
   border-radius: var(--radius);
   padding: 28px;
 }
-.coverage-box h3, .faq-box h3 {
+.coverage-box-solo { max-width: 620px; margin: 0 auto; }
+.coverage-box h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
 }
@@ -388,34 +383,133 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   color: var(--ink-soft);
   font-weight: 600;
 }
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+
+/* ===== Acordeón de preguntas frecuentes ===== */
+.accordion {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.faq-item summary {
-  cursor: pointer;
+.accordion-heading { margin: 0; }
+.accordion-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  cursor: pointer;
   touch-action: manipulation;
 }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
-  content: '+';
+.accordion-trigger:hover { color: var(--teal-dark); }
+.accordion-icon {
   flex: none;
-  font-size: 1.3rem;
-  line-height: 1;
   color: var(--turquoise);
+  transition: transform .2s ease;
 }
-.faq-item[open] summary::after { content: '−'; }
-.faq-item p {
+.accordion-trigger[aria-expanded="true"] .accordion-icon { transform: rotate(180deg); }
+.accordion-panel {
+  overflow: hidden;
+  height: 0;
+  transition: height .25s ease;
+}
+.accordion-panel-inner {
+  padding: 0 22px 20px;
   color: var(--ink-soft);
-  font-size: .93rem;
-  margin: 12px 0 0;
+  font-size: .95rem;
+}
+.accordion-panel-inner p { margin: 0; }
+
+/* ===== CTA de sección ===== */
+.section-cta {
+  text-align: center;
+  margin-top: 44px;
+}
+
+/* ===== Equipo — tarjetas de liderazgo ===== */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.leader-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--teal-dark);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.leader-photo-frame {
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--off-white);
+}
+.leader-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.leader-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #9AA8AC;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px;
+}
+.leader-photo-placeholder span {
+  font-size: .78rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.leader-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.leader-role {
+  color: var(--turquoise);
+  font-weight: 700;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 6px;
+}
+.leader-name {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.leader-bio {
+  color: var(--ink-soft);
+  font-size: .95rem;
+  margin: 0;
 }
 
 /* ===== Dirección / mapa ===== */
@@ -536,51 +630,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .specialty-link svg { transition: transform .15s ease; }
 .specialty-link:hover svg { transform: translateX(3px); }
-
-/* ===== Team ===== */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-.team-grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 760px;
-  margin: 0 auto;
-  gap: 48px;
-}
-.team-card { text-align: center; }
-.team-photo {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #EAF1EE;
-  border: 4px solid #fff;
-  box-shadow: var(--shadow-sm);
-  margin: 0 auto 24px;
-  max-width: 220px;
-}
-.team-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.team-info h3 {
-  font-size: 1.3rem;
-  margin-bottom: 4px;
-}
-.team-role {
-  color: var(--turquoise);
-  font-weight: 700;
-  font-size: .92rem;
-  text-transform: uppercase;
-  letter-spacing: .03em;
-  margin-bottom: 10px;
-}
-.team-bio {
-  color: var(--ink-soft);
-  font-size: .95rem;
-}
 
 /* ===== Trust ===== */
 .trust-grid {
@@ -721,18 +770,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 @media (max-width: 1024px) {
   .welcome-grid { grid-template-columns: repeat(2, 1fr); }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .reasons-grid { grid-template-columns: 1fr; }
   .procedures-list { grid-template-columns: 1fr; }
-  .patients-grid { grid-template-columns: 1fr; }
+  .leaders-grid { grid-template-columns: 1fr; }
   .map-grid { grid-template-columns: 1fr; }
   .map-embed-wrap { aspect-ratio: 16 / 9; }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1180px) {
   .main-nav {
     position: fixed;
     top: var(--header-h);
@@ -755,10 +803,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .section { padding: 64px 0; }
   .welcome-grid { grid-template-columns: 1fr; gap: 28px; }
   .cards-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-  .team-grid-2 { grid-template-columns: 1fr; gap: 40px; }
   .footer-inner { grid-template-columns: 1fr; padding: 48px 0 32px; }
   .hero { min-height: 520px; }
   .video-play { width: 60px; height: 60px; }
   .section-map { padding: 56px 0; }
+  .leader-card { grid-template-columns: 1fr; text-align: center; }
+  .leader-photo-frame { max-width: 220px; margin: 0 auto; }
+  .leader-info { align-items: center; }
 }

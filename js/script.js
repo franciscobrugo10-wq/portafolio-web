@@ -83,7 +83,68 @@ function setupNavToggle() {
   });
 }
 
+// ===== Acordeón de preguntas frecuentes =====
+function setupFaqAccordion() {
+  const accordion = document.getElementById('faq-accordion');
+  if (!accordion) return;
+
+  const triggers = accordion.querySelectorAll('.accordion-trigger');
+
+  triggers.forEach((trigger) => {
+    const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+    if (!panel) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+      isOpen ? closePanel(trigger, panel) : openPanel(trigger, panel);
+    });
+  });
+
+  // Evita que una transición pendiente (de un toggle anterior interrumpido)
+  // pise el estado del toggle actual al togglear rápido.
+  function clearPendingTransition(panel) {
+    if (panel._pendingTransitionHandler) {
+      panel.removeEventListener('transitionend', panel._pendingTransitionHandler);
+      panel._pendingTransitionHandler = null;
+    }
+  }
+
+  function openPanel(trigger, panel) {
+    clearPendingTransition(panel);
+    trigger.setAttribute('aria-expanded', 'true');
+    panel.hidden = false;
+    const targetHeight = panel.scrollHeight;
+    panel.style.height = '0px';
+    // Forzar reflow para que la transición desde 0 se aplique.
+    panel.offsetHeight;
+    panel.style.height = targetHeight + 'px';
+
+    panel._pendingTransitionHandler = (e) => {
+      if (e.propertyName !== 'height') return;
+      panel.style.height = 'auto';
+      panel._pendingTransitionHandler = null;
+    };
+    panel.addEventListener('transitionend', panel._pendingTransitionHandler, { once: true });
+  }
+
+  function closePanel(trigger, panel) {
+    clearPendingTransition(panel);
+    trigger.setAttribute('aria-expanded', 'false');
+    panel.style.height = panel.scrollHeight + 'px';
+    panel.offsetHeight;
+    panel.style.height = '0px';
+
+    panel._pendingTransitionHandler = (e) => {
+      if (e.propertyName !== 'height') return;
+      panel.hidden = true;
+      panel._pendingTransitionHandler = null;
+    };
+    panel.addEventListener('transitionend', panel._pendingTransitionHandler, { once: true });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderSpecialties();
   setupNavToggle();
+  setupFaqAccordion();
 });
