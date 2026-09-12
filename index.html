@@ -9,6 +9,58 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<!--
+  Datos estructurados (schema.org). Usa solo información ya confirmada en
+  el sitio (dirección, teléfono, horarios, especialidades, redes). No
+  incluye "url" ni una imagen de logo absoluta porque el sitio todavía no
+  tiene un dominio real asignado: sumalas ([COMPLETAR-DOMINIO-REAL]) apenas
+  se confirme el dominio final.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Seremas",
+  "alternateName": "SEREMAS - Centro de Medicina para el Hombre y la Mujer",
+  "description": "Clínica especializada en fertilidad asistida, medicina reproductiva y salud sexual.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Arenales 1954, 1er piso",
+    "addressLocality": "Ciudad Autónoma de Buenos Aires",
+    "addressRegion": "CABA",
+    "addressCountry": "AR"
+  },
+  "telephone": "+54-11-5032-3358",
+  "email": "info@seremas.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ],
+  "medicalSpecialty": [
+    "Medicina Reproductiva",
+    "Ginecología",
+    "Urología",
+    "Andrología",
+    "Climaterio Masculino",
+    "Psicología"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/seremas.fertilidad/",
+    "https://www.facebook.com/SeremasMedicina/",
+    "https://twitter.com/seremasok"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -634,8 +686,11 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="container">
+    <div class="container footer-bottom-inner">
       <p>&copy; 2026 Seremas. Todos los derechos reservados.</p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="privacidad.html">Política de privacidad</a>
+      </nav>
     </div>
   </div>
 </footer>

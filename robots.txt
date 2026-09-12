@@ -1,0 +1,8 @@
+# [COMPLETAR-DOMINIO-REAL]: reemplazar por el dominio real del sitio en
+# cuanto esté asignado. Mientras diga "[COMPLETAR-DOMINIO-REAL]" la línea
+# Sitemap de abajo apunta a una URL inválida y los buscadores la ignoran.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://[COMPLETAR-DOMINIO-REAL]/sitemap.xml

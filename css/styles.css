@@ -518,6 +518,86 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   margin: 0;
 }
 
+/* ===== Página legal (privacidad) ===== */
+.legal-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.legal-content h2 {
+  font-size: 1.25rem;
+  margin-top: 40px;
+  border-top: 3px solid var(--border-mint);
+  padding-top: 16px;
+}
+.legal-content h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+.legal-content p, .legal-content li {
+  color: var(--ink-soft);
+  font-size: .98rem;
+  line-height: 1.7;
+}
+.legal-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 20px;
+  padding-left: 0;
+}
+.legal-content ul li {
+  padding-left: 22px;
+  position: relative;
+}
+.legal-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal-dark);
+}
+.legal-content strong { color: var(--navy); }
+.legal-updated {
+  color: var(--ink-soft);
+  font-size: .88rem;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+/* ===== Página 404 ===== */
+.error-page {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--mint);
+}
+.error-code {
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(90deg, var(--teal-dark), var(--turquoise), var(--lime));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+.error-page h1 { margin-bottom: 12px; }
+.error-desc {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto 32px;
+}
+.error-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 /* ===== Quiénes somos — misión, visión, valores ===== */
 .values-grid {
   display: grid;
@@ -821,6 +901,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: .85rem;
   color: #93A0AC;
 }
+.footer-bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.footer-legal a { color: #93A0AC; }
+.footer-legal a:hover { color: var(--turquoise); }
 
 /* ===== WhatsApp float ===== */
 .whatsapp-float {
