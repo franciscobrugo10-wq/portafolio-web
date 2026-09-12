@@ -944,7 +944,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .map-embed-wrap { aspect-ratio: 16 / 9; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .main-nav {
     position: fixed;
     top: var(--header-h);
