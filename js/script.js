@@ -1,67 +1,136 @@
+// ===== Preferencias persistidas =====
+const LANG_STORAGE_KEY = 'seremas-lang';
+const THEME_STORAGE_KEY = 'seremas-theme';
+
+function getStoredLang() {
+  try {
+    return localStorage.getItem(LANG_STORAGE_KEY) || 'es';
+  } catch (e) {
+    return 'es';
+  }
+}
+
+function setStoredLang(lang) {
+  try {
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch (e) {}
+}
+
+function setStoredTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch (e) {}
+}
+
 // ===== Datos de especialidades =====
 // Textos e íconos extraídos de seremas.com/ (sección "Nuestras especialidades").
+// Los nombres/descripciones viven en TRANSLATIONS (spec.<key>.name / .desc)
+// para poder re-renderizar la grilla al cambiar de idioma.
 const SPECIALTIES = [
-  {
-    name: "Medicina Reproductiva",
-    desc: "Nuestro objetivo es preservar la fecundidad, diagnosticar y tratar la infertilidad y otros problemas reproductivos para lograr cumplir el sueño de tener un hijo.",
-    icon: "img/especialidades/01.png"
-  },
-  {
-    name: "Ginecología",
-    desc: "Atención médica de la mujer durante su edad reproductiva, ya sea para el control, asesoramiento y eventual diagnóstico y tratamiento.",
-    icon: "img/especialidades/02-1.png"
-  },
-  {
-    name: "Urología",
-    desc: "Las infecciones urinarias, las litiasis, la incontinencia urinaria y demás enfermedades urológicas deben ser diagnosticadas y tratadas.",
-    icon: "img/especialidades/03.png"
-  },
-  {
-    name: "Endocrinología",
-    desc: "Profesionales asociados que se encargan del estudio de los problemas endocrinos del eje hipotálamo-hipófiso-gonadal, exceso de prolactina, como así también de las enfermedades de la tiroides, paratiroides y adrenales.",
-    icon: "img/especialidades/04.png"
-  },
-  {
-    name: "Climaterio Masculino",
-    desc: "Atendemos a aquellos pacientes que en general han alcanzado los 50 años y que presentan algún síntoma que puede variar desde cierta disfunción sexual hasta cansancio generalizado.",
-    icon: "img/especialidades/05.png"
-  },
-  {
-    name: "Psicología",
-    desc: "Fundamental debido al impacto que los problemas de la salud reproductiva ejercen sobre el área emocional de los pacientes.",
-    icon: "img/especialidades/06.png"
-  },
-  {
-    name: "Andrología",
-    desc: "Disciplina médica que se aboca al estudio de los trastornos de la fertilidad y sexualidad del hombre. En otras palabras, se ocupa de la salud reproductiva masculina.",
-    icon: "img/especialidades/07.png"
-  },
-  {
-    name: "Sexología",
-    desc: "El diagnóstico preciso sumado a tratamientos sexológicos y/o con medicación acorde a cada caso en especial, constituyen la respuesta más moderna y eficaz.",
-    icon: "img/especialidades/08.png"
-  }
+  { key: 'medicinaReproductiva', icon: 'img/especialidades/01.png' },
+  { key: 'ginecologia', icon: 'img/especialidades/02-1.png' },
+  { key: 'urologia', icon: 'img/especialidades/03.png' },
+  { key: 'endocrinologia', icon: 'img/especialidades/04.png' },
+  { key: 'climaterioMasculino', icon: 'img/especialidades/05.png' },
+  { key: 'psicologia', icon: 'img/especialidades/06.png' },
+  { key: 'andrologia', icon: 'img/especialidades/07.png' },
+  { key: 'sexologia', icon: 'img/especialidades/08.png' }
 ];
 
-function renderSpecialties() {
+function renderSpecialties(lang) {
   const grid = document.getElementById('specialty-grid');
   if (!grid) return;
 
-  grid.innerHTML = SPECIALTIES.map((s) => `
+  lang = lang || getStoredLang();
+  const dict = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang]) || {};
+  const verMas = dict['specialties.verMas'] || 'Ver más';
+
+  grid.innerHTML = SPECIALTIES.map((s) => {
+    const name = dict[`spec.${s.key}.name`] || '';
+    const desc = dict[`spec.${s.key}.desc`] || '';
+    return `
     <article class="specialty-card">
       <div class="specialty-icon" aria-hidden="true">
         <span class="specialty-icon-fill" style="-webkit-mask-image:url('${s.icon}');mask-image:url('${s.icon}');"></span>
       </div>
-      <h3>${s.name}</h3>
-      <p>${s.desc}</p>
-      <a class="specialty-link" href="#contacto" aria-label="Ver más sobre ${s.name}">
-        Ver más
+      <h3>${name}</h3>
+      <p>${desc}</p>
+      <a class="specialty-link" href="#contacto" aria-label="${verMas}: ${name}">
+        ${verMas}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14M13 6l6 6-6 6"/>
         </svg>
       </a>
     </article>
-  `).join('');
+  `;
+  }).join('');
+}
+
+// ===== Idioma (ES/EN) =====
+function applyTranslations(lang) {
+  if (typeof TRANSLATIONS === 'undefined') return;
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.es;
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-html');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-aria-label]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+  });
+
+  document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es-AR');
+}
+
+function updateLangToggleUI(lang) {
+  const toggle = document.getElementById('lang-toggle');
+  if (!toggle) return;
+  toggle.querySelectorAll('.lang-option').forEach((btn) => {
+    btn.setAttribute('aria-pressed', String(btn.getAttribute('data-lang') === lang));
+  });
+}
+
+function setLanguage(lang) {
+  setStoredLang(lang);
+  applyTranslations(lang);
+  renderSpecialties(lang);
+  updateLangToggleUI(lang);
+}
+
+function setupLangToggle() {
+  const toggle = document.getElementById('lang-toggle');
+  if (!toggle) return;
+
+  toggle.querySelectorAll('.lang-option').forEach((btn) => {
+    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+  });
+}
+
+// ===== Modo oscuro =====
+function setTheme(theme) {
+  setStoredTheme(theme);
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+}
+
+function setupThemeToggle() {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setTheme(isDark ? 'light' : 'dark');
+  });
 }
 
 // ===== Menú móvil =====
@@ -144,7 +213,13 @@ function setupFaqAccordion() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderSpecialties();
+  const lang = getStoredLang();
+  renderSpecialties(lang);
+  applyTranslations(lang);
+  updateLangToggleUI(lang);
+
+  setupLangToggle();
+  setupThemeToggle();
   setupNavToggle();
   setupFaqAccordion();
 });

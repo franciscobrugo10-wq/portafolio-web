@@ -18,6 +18,13 @@
   --ink: #22282F;
   --ink-soft: #56606B;
   --border: #E3E9E6;
+  /* --surface: fondo de tarjetas/paneles. --text-strong: color de títulos.
+     Separadas de --white/--navy porque esos dos también se usan como
+     fondo de secciones que deben quedar siempre oscuras (footer, CTA
+     final, mapa) sin importar el tema; --surface/--text-strong sí
+     cambian con [data-theme="dark"]. */
+  --surface: #FFFFFF;
+  --text-strong: var(--navy);
 
   --font-base: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
@@ -25,6 +32,31 @@
   --shadow-sm: 0 1px 3px rgba(51, 60, 78, 0.08);
   --shadow-md: 0 8px 24px rgba(51, 60, 78, 0.12);
   --header-h: 76px;
+}
+
+/* ===== Tema oscuro =====
+   Mantiene los colores de marca (verde/turquesa/lima) intactos como
+   acentos; solo cambian los fondos y textos neutros. Las secciones que ya
+   eran oscuras por diseño (footer, CTA final, mapa) usan --navy como
+   fondo literal y no varían con el tema. */
+:root[data-theme="dark"] {
+  --white: #12161C;
+  --off-white: #1A1F27;
+  --mint: #16241F;
+  --border-mint: rgba(139, 195, 74, .3);
+  --surface: #1C222B;
+  --border: #2B3440;
+  --ink: #E7ECEA;
+  --ink-soft: #A9B3B0;
+  --text-strong: #F3F6F4;
+  --teal-text: #7FD9B6;
+  --turquoise-text: #7FD6E6;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, .4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .5);
+}
+:root[data-theme="dark"] .site-header {
+  background: rgba(18, 22, 28, .92);
+  border-bottom-color: var(--border);
 }
 
 * { box-sizing: border-box; }
@@ -40,7 +72,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
-h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0 0 .5em; color: var(--navy); text-wrap: balance; }
+h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0 0 .5em; color: var(--text-strong); text-wrap: balance; }
 p { margin: 0 0 1em; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -108,7 +140,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .btn-ghost-alt {
   background: transparent;
   border-color: var(--border);
-  color: var(--navy);
+  color: var(--text-strong);
 }
 .btn-ghost-alt:hover { background: var(--off-white); border-color: var(--turquoise); }
 .btn-lg { padding: 16px 32px; font-size: 1.05rem; }
@@ -137,7 +169,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .main-nav ul { display: flex; gap: 32px; }
 .main-nav a {
   font-weight: 600;
-  color: var(--navy);
+  color: var(--text-strong);
   font-size: 1rem;
   padding: 8px 0;
   position: relative;
@@ -174,13 +206,56 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: block;
   height: 2px;
   width: 24px;
-  background: var(--navy);
+  background: var(--text-strong);
   margin: 0 auto;
   transition: transform .2s ease, opacity .2s ease;
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== Selector de idioma y modo oscuro (header) ===== */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.lang-option {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--ink-soft);
+  line-height: 1;
+}
+.lang-option[aria-pressed="true"] {
+  background: var(--teal-dark);
+  color: #fff;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: none;
+  color: var(--text-strong);
+}
+.theme-toggle:hover { border-color: var(--turquoise); }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 
 /* ===== Hero ===== */
 .hero {
@@ -288,7 +363,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--surface);
   color: var(--turquoise);
   display: flex;
   align-items: center;
@@ -395,7 +470,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   margin: 4px 0 16px;
 }
 .coverage-chips li {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-mint);
   border-radius: 999px;
   padding: 8px 16px;
@@ -419,7 +494,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .accordion-heading { margin: 0; }
 .accordion-item {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -437,7 +512,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text-strong);
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -476,7 +551,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 28px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-left: 5px solid var(--teal-dark);
   border-radius: var(--radius);
@@ -556,7 +631,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   border-radius: 50%;
   background: var(--teal-dark);
 }
-.legal-content strong { color: var(--navy); }
+.legal-content strong { color: var(--text-strong); }
 .legal-updated {
   color: var(--ink-soft);
   font-size: .88rem;
@@ -605,7 +680,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   gap: 24px;
 }
 .value-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-mint);
   border-top: 4px solid var(--teal-dark);
   border-radius: var(--radius);
@@ -654,7 +729,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .gallery-name {
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text-strong);
   font-size: 1.05rem;
 }
 .gallery-role {
@@ -730,7 +805,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   gap: 24px;
 }
 .specialty-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border-mint);
   border-radius: var(--radius);
   padding: 28px 24px;
@@ -765,7 +840,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .specialty-card h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;
-  color: var(--navy);
+  color: var(--text-strong);
 }
 .specialty-card p {
   color: var(--ink-soft);
@@ -827,7 +902,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   border-style: solid;
   border-color: var(--turquoise);
   background: rgba(59, 175, 191, .06);
-  color: var(--navy);
+  color: var(--text-strong);
 }
 .badge-item .badge-number {
   display: block;
@@ -844,7 +919,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .testimonial-card {
   margin: 0;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-left: 4px solid var(--lime);
   border-radius: var(--radius);
@@ -949,7 +1024,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     position: fixed;
     top: var(--header-h);
     left: 0; right: 0;
-    background: #fff;
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
     max-height: 0;
     overflow-y: auto;
@@ -960,7 +1035,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .main-nav a { display: block; padding: 12px 0; }
   .nav-toggle { display: flex; }
   .btn-header-cta { padding: 8px 16px; font-size: .88rem; }
+  .header-actions { gap: 10px; }
   .trust-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .header-actions { gap: 6px; }
+  .btn-header-cta { padding: 7px 12px; font-size: .8rem; }
+  .lang-option { padding: 5px 8px; font-size: .72rem; }
+  .theme-toggle { width: 34px; height: 34px; }
+  .nav-toggle { width: 32px; height: 32px; }
 }
 
 @media (max-width: 640px) {
