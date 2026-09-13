@@ -454,7 +454,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   border-radius: var(--radius);
   padding: 28px;
 }
-.coverage-box-solo { max-width: 620px; margin: 0 auto; }
+.coverage-box-solo { max-width: 900px; margin: 0 auto; }
 .coverage-box h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
@@ -463,26 +463,56 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   color: var(--ink-soft);
   font-size: .92rem;
 }
-.coverage-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 4px 0 16px;
-}
-.coverage-chips li {
-  background: var(--surface);
-  border: 1px solid var(--border-mint);
-  border-radius: 999px;
-  padding: 8px 16px;
-  font-size: .85rem;
-  color: var(--teal-text);
-  font-weight: 700;
-}
 .coverage-note {
   color: var(--ink-soft);
   font-size: .88rem;
   margin: 0;
 }
+
+/* Grid de logos de obras sociales/prepagas ("trust bar"). Las tarjetas
+   quedan siempre en fondo claro/blanco literal (no var(--surface)) porque
+   los logos de terceros están diseñados para fondo blanco y no deben
+   re-temizarse en modo oscuro, igual que .map-open-link. */
+.coverage-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  list-style: none;
+  margin: 4px 0 18px;
+  padding: 0;
+}
+.coverage-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 92px;
+  background: #fff;
+  border: 1px solid var(--border-mint);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+.coverage-logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 100%;
+}
+.coverage-logo-badge img {
+  max-height: 38px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.coverage-logo-name {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.coverage-logo-item-text .coverage-logo-name { font-size: .85rem; }
 
 /* ===== Acordeón de preguntas frecuentes ===== */
 .accordion {
