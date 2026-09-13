@@ -158,7 +158,7 @@ const TRANSLATIONS = {
 
     // Información para pacientes / coberturas
     "pacientes.eyebrow": "Información para pacientes",
-    "pacientes.title": "Recursos para empezar tu tratamiento con confianza",
+    "pacientes.title": "Obras sociales y coberturas",
     "coverage.title": "Coberturas sin costo para el paciente",
     "coverage.intro": "Si tenés alguna de estas coberturas, la consulta y el tratamiento no tienen costo: los cubre directamente tu obra social o prepaga.",
     "coverage.note": "¿Tu obra social o prepaga no figura en esta lista? Consultanos igual: también podés abonar el tratamiento de forma particular.",
@@ -398,7 +398,7 @@ const TRANSLATIONS = {
     "testimonio3.quote": "“Thanks to Dr. Brugo Olmedo for the happiness that little Josefina brings us.”",
 
     "pacientes.eyebrow": "Information for patients",
-    "pacientes.title": "Resources to start your treatment with confidence",
+    "pacientes.title": "Health coverage and insurance",
     "coverage.title": "Coverage plans with no cost to the patient",
     "coverage.intro": "If you have any of these coverage plans, the consultation and treatment are free of charge: they are covered directly by your obra social or prepaga.",
     "coverage.note": "Is your obra social or prepaga not on this list? Contact us anyway: you can also pay for treatment privately.",
