@@ -35,6 +35,7 @@ const TRANSLATIONS = {
     "footer.sitio.procedimientos": "Procedimientos",
     "footer.sitio.confianza": "Confianza",
     "footer.sitio.pacientes": "Pacientes",
+    "footer.sitio.primerosPasos": "Primeros pasos",
     "footer.sitio.faq": "Preguntas frecuentes",
     "footer.seguinos.title": "Seguinos",
     "footer.copyright": "© 2026 Seremas. Todos los derechos reservados.",
@@ -170,6 +171,18 @@ const TRANSLATIONS = {
     "coverage.intro": "Si tenés alguna de estas coberturas, la consulta y el tratamiento no tienen costo: los cubre directamente tu obra social o prepaga.",
     "coverage.note": "¿Tu obra social o prepaga no figura en esta lista? Consultanos igual: también podés abonar el tratamiento de forma particular.",
 
+    // Primeros pasos
+    "primerospasos.eyebrow": "Primeros pasos",
+    "primerospasos.title": "Cómo empezar tu tratamiento con nosotros",
+    "primerospasos.sub": "Estos son los primeros pasos para iniciar tu proceso en Seremas.",
+    "primerospasos.step1.title": "Qué esperar en la primera consulta",
+    "primerospasos.step1.desc": "Para una primera consulta de orientación, en general no hace falta traer una orden médica, aunque esto puede variar según tu cobertura: algunas obras sociales y prepagas piden una derivación previa. Ante la duda, lo mejor es consultarlo directamente con Seremas al momento de agendar.",
+    "primerospasos.step2.title": "Cómo se saca un turno",
+    "primerospasos.step2.desc": "El turno se coordina por WhatsApp: escribinos y te ayudamos a agendar tu primera consulta con el equipo.",
+    "primerospasos.step2.cta": "Escribinos por WhatsApp",
+    "primerospasos.step3.title": "Qué llevar a la primera consulta",
+    "primerospasos.step3.desc": "[COMPLETAR: qué debe traer el paciente a la primera consulta]",
+
     // FAQ
     "faq.eyebrow": "Preguntas frecuentes",
     "faq.title": "Resolvemos tus primeras dudas",
@@ -292,6 +305,7 @@ const TRANSLATIONS = {
     "footer.sitio.procedimientos": "Procedures",
     "footer.sitio.confianza": "Trust",
     "footer.sitio.pacientes": "Patients",
+    "footer.sitio.primerosPasos": "Getting started",
     "footer.sitio.faq": "FAQ",
     "footer.seguinos.title": "Follow us",
     "footer.copyright": "© 2026 Seremas. All rights reserved.",
@@ -416,6 +430,17 @@ const TRANSLATIONS = {
     "coverage.title": "Coverage plans with no cost to the patient",
     "coverage.intro": "If you have any of these coverage plans, the consultation and treatment are free of charge: they are covered directly by your obra social or prepaga.",
     "coverage.note": "Is your obra social or prepaga not on this list? Contact us anyway: you can also pay for treatment privately.",
+
+    "primerospasos.eyebrow": "Getting started",
+    "primerospasos.title": "How to start your treatment with us",
+    "primerospasos.sub": "These are the first steps to start your process at Seremas.",
+    "primerospasos.step1.title": "What to expect at your first consultation",
+    "primerospasos.step1.desc": "For a first orientation consultation, you generally don't need to bring a medical referral, though this can vary depending on your coverage: some obras sociales and prepagas require a prior referral. If in doubt, it's best to check directly with Seremas when booking.",
+    "primerospasos.step2.title": "How to book an appointment",
+    "primerospasos.step2.desc": "Appointments are coordinated via WhatsApp: message us and we'll help you schedule your first consultation with the team.",
+    "primerospasos.step2.cta": "Message us on WhatsApp",
+    "primerospasos.step3.title": "What to bring to your first consultation",
+    "primerospasos.step3.desc": "[TO COMPLETE: what patients should bring to their first consultation]",
 
     "faq.eyebrow": "Frequently asked questions",
     "faq.title": "We answer your first questions",

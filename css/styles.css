@@ -703,6 +703,48 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   gap: 16px;
 }
 
+/* ===== Primeros pasos ===== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.step-card {
+  background: var(--surface);
+  border: 1px solid var(--border-mint);
+  border-top: 4px solid var(--teal-dark);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.step-card:nth-child(2) { border-top-color: var(--turquoise); }
+.step-card:nth-child(3) { border-top-color: var(--lime); }
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--teal-text);
+  font-weight: 800;
+  font-size: .95rem;
+  margin-bottom: 14px;
+}
+.step-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.step-card p {
+  color: var(--ink-soft);
+  font-size: .92rem;
+  margin: 0 0 14px;
+}
+.step-card .btn {
+  font-size: .85rem;
+  padding: 8px 18px;
+}
+
 /* ===== Quiénes somos — misión, visión, valores ===== */
 .values-grid {
   display: grid;
@@ -1109,6 +1151,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .procedures-list { grid-template-columns: 1fr; }
   .leaders-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
   .map-grid { grid-template-columns: 1fr; }
   .map-embed-wrap { aspect-ratio: 16 / 9; }
 }
