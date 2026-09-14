@@ -218,12 +218,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- ===== WHATSAPP FLOTANTE ===== -->
-<a href="https://wa.me/5491160481891" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" data-i18n-aria-label="whatsapp.aria">
-  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.735 5.47 2.02 7.77L0 32l8.44-1.98A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z" fill="#25D366"/>
-    <path d="M23.5 19.1c-.4-.2-2.3-1.1-2.6-1.3-.35-.13-.6-.2-.86.2-.26.4-1 1.3-1.22 1.56-.22.26-.45.3-.84.1-.4-.2-1.66-.61-3.16-1.94-1.17-1.04-1.96-2.33-2.19-2.72-.23-.4-.02-.61.17-.8.18-.18.4-.46.6-.7.2-.23.26-.4.4-.66.13-.26.06-.5-.03-.7-.1-.2-.86-2.08-1.18-2.85-.31-.75-.63-.65-.86-.66-.22-.01-.48-.01-.73-.01-.26 0-.68.1-1.03.5-.35.4-1.35 1.32-1.35 3.2 0 1.88 1.38 3.7 1.57 3.96.2.26 2.72 4.15 6.58 5.82.92.4 1.63.63 2.19.8.92.29 1.75.25 2.41.15.74-.11 2.27-.93 2.6-1.82.31-.9.31-1.66.22-1.82-.09-.16-.34-.26-.74-.46Z" fill="#fff"/>
-  </svg>
-</a>
+<div class="whatsapp-widget" id="whatsapp-widget">
+  <button type="button" class="whatsapp-float" id="whatsapp-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="whatsapp-menu" aria-label="Contactar por WhatsApp" data-i18n-aria-label="whatsapp.aria">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.735 5.47 2.02 7.77L0 32l8.44-1.98A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z" fill="#25D366"/>
+      <path d="M23.5 19.1c-.4-.2-2.3-1.1-2.6-1.3-.35-.13-.6-.2-.86.2-.26.4-1 1.3-1.22 1.56-.22.26-.45.3-.84.1-.4-.2-1.66-.61-3.16-1.94-1.17-1.04-1.96-2.33-2.19-2.72-.23-.4-.02-.61.17-.8.18-.18.4-.46.6-.7.2-.23.26-.4.4-.66.13-.26.06-.5-.03-.7-.1-.2-.86-2.08-1.18-2.85-.31-.75-.63-.65-.86-.66-.22-.01-.48-.01-.73-.01-.26 0-.68.1-1.03.5-.35.4-1.35 1.32-1.35 3.2 0 1.88 1.38 3.7 1.57 3.96.2.26 2.72 4.15 6.58 5.82.92.4 1.63.63 2.19.8.92.29 1.75.25 2.41.15.74-.11 2.27-.93 2.6-1.82.31-.9.31-1.66.22-1.82-.09-.16-.34-.26-.74-.46Z" fill="#fff"/>
+    </svg>
+  </button>
+
+  <div class="whatsapp-menu" id="whatsapp-menu" aria-label="Opciones de contacto por WhatsApp" data-i18n-aria-label="whatsapp.menu.ariaLabel" hidden>
+    <a href="https://wa.me/5491160481891?text=Hola%21%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20tratamientos%20de%20fertilidad%20de%20Seremas." class="whatsapp-menu-item" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.menu.info">Información general</a>
+    <a href="https://wa.me/5491160481891?text=Hola%21%20Quisiera%20sacar%20un%20turno%20para%20una%20primera%20consulta." class="whatsapp-menu-item" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.menu.turno">Sacar un turno</a>
+    <a href="https://wa.me/5491160481891?text=Hola%21%20Quer%C3%ADa%20consultar%20si%20mi%20obra%20social%20o%20prepaga%20tiene%20cobertura%20en%20Seremas." class="whatsapp-menu-item" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.menu.cobertura">Cobertura / obra social</a>
+    <a href="https://wa.me/5491160481891?text=Hola%21%20Tengo%20una%20consulta%20sobre%20uno%20de%20los%20tratamientos%20que%20ofrecen." class="whatsapp-menu-item" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.menu.tratamiento">Consulta sobre un tratamiento</a>
+    <a href="https://wa.me/5491160481891" class="whatsapp-menu-item" target="_blank" rel="noopener noreferrer" data-i18n="whatsapp.menu.otra">Otra consulta</a>
+    <button type="button" class="whatsapp-menu-item whatsapp-menu-close" id="whatsapp-menu-close">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <span data-i18n="whatsapp.menu.cerrar">Cerrar</span>
+    </button>
+  </div>
+</div>
 
 <script src="js/translations.js"></script>
 <script src="js/script.js"></script>

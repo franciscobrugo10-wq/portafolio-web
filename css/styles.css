@@ -1017,22 +1017,86 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .footer-legal a:hover { color: var(--turquoise); }
 
 /* ===== WhatsApp float ===== */
-.whatsapp-float {
+.whatsapp-widget {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 90;
+}
+.whatsapp-float {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
   box-shadow: var(--shadow-md);
   transition: transform .15s ease;
   touch-action: manipulation;
+  cursor: pointer;
 }
 .whatsapp-float:hover { transform: scale(1.08); }
+
+/* Menú de opciones que despliega el botón flotante. Las tarjetas usan los
+   mismos tokens de --surface/--text-strong que ya se adaptan a modo oscuro. */
+.whatsapp-menu {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: 268px;
+  max-width: calc(100vw - 48px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: whatsapp-menu-in .15s ease;
+}
+.whatsapp-menu[hidden] { display: none; }
+@keyframes whatsapp-menu-in {
+  from { opacity: 0; transform: translateY(8px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.whatsapp-menu-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-strong);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.whatsapp-menu-item:hover,
+.whatsapp-menu-item:focus-visible {
+  background: var(--mint);
+}
+.whatsapp-menu-item:focus-visible {
+  outline: 2px solid var(--turquoise);
+  outline-offset: -2px;
+}
+.whatsapp-menu-close {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.whatsapp-menu-close:hover,
+.whatsapp-menu-close:focus-visible { background: var(--off-white); }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {

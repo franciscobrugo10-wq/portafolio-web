@@ -212,6 +212,50 @@ function setupFaqAccordion() {
   }
 }
 
+// ===== Menú del botón flotante de WhatsApp =====
+function setupWhatsappWidget() {
+  const widget = document.getElementById('whatsapp-widget');
+  const toggle = document.getElementById('whatsapp-toggle');
+  const menu = document.getElementById('whatsapp-menu');
+  const closeBtn = document.getElementById('whatsapp-menu-close');
+  if (!widget || !toggle || !menu) return;
+
+  function openMenu() {
+    menu.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    const firstItem = menu.querySelector('.whatsapp-menu-item');
+    if (firstItem) firstItem.focus();
+  }
+
+  function closeMenu({ focusToggle = false } = {}) {
+    if (menu.hidden) return;
+    menu.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    if (focusToggle) toggle.focus();
+  }
+
+  toggle.addEventListener('click', () => {
+    if (menu.hidden) openMenu();
+    else closeMenu();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeMenu({ focusToggle: true }));
+  }
+
+  menu.querySelectorAll('a.whatsapp-menu-item').forEach((link) => {
+    link.addEventListener('click', () => closeMenu());
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!widget.contains(e.target)) closeMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) closeMenu({ focusToggle: true });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const lang = getStoredLang();
   renderSpecialties(lang);
@@ -222,4 +266,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupThemeToggle();
   setupNavToggle();
   setupFaqAccordion();
+  setupWhatsappWidget();
 });

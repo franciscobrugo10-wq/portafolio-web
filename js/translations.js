@@ -20,6 +20,13 @@ const TRANSLATIONS = {
     "header.langToggleAria": "Cambiar idioma",
     "header.themeToggleAria": "Cambiar entre modo claro y oscuro",
     "whatsapp.aria": "Contactar por WhatsApp",
+    "whatsapp.menu.ariaLabel": "Opciones de contacto por WhatsApp",
+    "whatsapp.menu.info": "Información general",
+    "whatsapp.menu.turno": "Sacar un turno",
+    "whatsapp.menu.cobertura": "Cobertura / obra social",
+    "whatsapp.menu.tratamiento": "Consulta sobre un tratamiento",
+    "whatsapp.menu.otra": "Otra consulta",
+    "whatsapp.menu.cerrar": "Cerrar",
 
     // Footer (compartido)
     "footer.brand.tagline": "Somos una clínica especializada en fertilidad asistida.",
@@ -271,6 +278,13 @@ const TRANSLATIONS = {
     "header.langToggleAria": "Change language",
     "header.themeToggleAria": "Switch between light and dark mode",
     "whatsapp.aria": "Contact us on WhatsApp",
+    "whatsapp.menu.ariaLabel": "WhatsApp contact options",
+    "whatsapp.menu.info": "General information",
+    "whatsapp.menu.turno": "Book an appointment",
+    "whatsapp.menu.cobertura": "Coverage / health insurance",
+    "whatsapp.menu.tratamiento": "Question about a treatment",
+    "whatsapp.menu.otra": "Other inquiry",
+    "whatsapp.menu.cerrar": "Close",
 
     "footer.brand.tagline": "We are a clinic specialized in assisted fertility.",
     "footer.contacto.hours": "Mon-Fri 7:30am-7pm. Sat 8am-12pm.",
