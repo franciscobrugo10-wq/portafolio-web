@@ -153,7 +153,6 @@ const TRANSLATIONS = {
     "confianza.trustLabel1": "años de trayectoria (desde 2006)",
     "confianza.trustLabel2": "embarazos a término",
     "confianza.trustLabel3": "tratamientos externos",
-    "confianza.trustLabel4": "especialistas médicos",
     "confianza.badgeLabel": "reconocimientos internacionales",
     "confianza.badgePlaceholder": "[COMPLETAR: logo certificación / afiliación institucional]",
 
@@ -181,7 +180,8 @@ const TRANSLATIONS = {
     "primerospasos.step2.desc": "El turno se coordina por WhatsApp: escribinos y te ayudamos a agendar tu primera consulta con el equipo.",
     "primerospasos.step2.cta": "Escribinos por WhatsApp",
     "primerospasos.step3.title": "Qué llevar a la primera consulta",
-    "primerospasos.step3.desc": "[COMPLETAR: qué debe traer el paciente a la primera consulta]",
+    "primerospasos.step3.mujer": "<strong>Mujer:</strong> todos los estudios ginecológicos más recientes, y cualquier estudio relacionado a fertilidad que tenga (por ejemplo, dosaje hormonal para conocer la reserva ovárica, o una histerosalpingografía).",
+    "primerospasos.step3.varon": "<strong>Varón:</strong> un espermograma.",
 
     // FAQ
     "faq.eyebrow": "Preguntas frecuentes",
@@ -415,7 +415,6 @@ const TRANSLATIONS = {
     "confianza.trustLabel1": "years of track record (since 2006)",
     "confianza.trustLabel2": "full-term pregnancies",
     "confianza.trustLabel3": "external treatments",
-    "confianza.trustLabel4": "medical specialists",
     "confianza.badgeLabel": "international awards",
     "confianza.badgePlaceholder": "[TO COMPLETE: certification / institutional affiliation logo]",
 
@@ -440,7 +439,8 @@ const TRANSLATIONS = {
     "primerospasos.step2.desc": "Appointments are coordinated via WhatsApp: message us and we'll help you schedule your first consultation with the team.",
     "primerospasos.step2.cta": "Message us on WhatsApp",
     "primerospasos.step3.title": "What to bring to your first consultation",
-    "primerospasos.step3.desc": "[TO COMPLETE: what patients should bring to their first consultation]",
+    "primerospasos.step3.mujer": "<strong>Women:</strong> all your most recent gynecological studies, and any fertility-related study you may have (for example, a hormone panel to assess ovarian reserve, or a hysterosalpingogram).",
+    "primerospasos.step3.varon": "<strong>Men:</strong> a semen analysis (spermogram).",
 
     "faq.eyebrow": "Frequently asked questions",
     "faq.title": "We answer your first questions",

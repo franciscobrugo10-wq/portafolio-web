@@ -740,6 +740,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: .92rem;
   margin: 0 0 14px;
 }
+.step-card p:last-child { margin-bottom: 0; }
+.step-card strong { color: var(--text-strong); }
 .step-card .btn {
   font-size: .85rem;
   padding: 8px 18px;
@@ -934,7 +936,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 /* ===== Trust ===== */
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 56px;
 }
