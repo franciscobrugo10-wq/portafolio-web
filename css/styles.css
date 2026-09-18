@@ -32,6 +32,9 @@
   --shadow-sm: 0 1px 3px rgba(51, 60, 78, 0.08);
   --shadow-md: 0 8px 24px rgba(51, 60, 78, 0.12);
   --header-h: 76px;
+
+  /* Ajusta scrollbar/inputs/controles nativos del navegador al tema activo. */
+  color-scheme: light;
 }
 
 /* ===== Tema oscuro =====
@@ -40,6 +43,7 @@
    eran oscuras por diseño (footer, CTA final, mapa) usan --navy como
    fondo literal y no varían con el tema. */
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --white: #12161C;
   --off-white: #1A1F27;
   --mint: #16241F;
@@ -1100,6 +1104,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  transform-origin: bottom right;
   animation: whatsapp-menu-in .15s ease;
 }
 .whatsapp-menu[hidden] { display: none; }
