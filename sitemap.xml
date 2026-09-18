@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  [COMPLETAR-DOMINIO-REAL]: reemplazar en las 3 URLs de abajo por el
-  dominio real del sitio en cuanto esté asignado. Mientras diga
-  "[COMPLETAR-DOMINIO-REAL]" este sitemap apunta a URLs inválidas y los
-  buscadores lo van a rechazar silenciosamente.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://[COMPLETAR-DOMINIO-REAL]/</loc>
+    <loc>https://seremas.com/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://[COMPLETAR-DOMINIO-REAL]/quienes-somos.html</loc>
+    <loc>https://seremas.com/quienes-somos.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://[COMPLETAR-DOMINIO-REAL]/privacidad.html</loc>
+    <loc>https://seremas.com/privacidad.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
